@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 import { contactConfig } from '../config/contact';
+import { API_URL } from '../config/api';
 
 const Join = () => {
   const [formData, setFormData] = useState({
@@ -26,7 +27,7 @@ const Join = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

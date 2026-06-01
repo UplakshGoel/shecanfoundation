@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logoImg from '../assets/shecanimg.avif';
 import { contactConfig } from '../config/contact';
+import { API_URL } from '../config/api';
 
 function Footer() {
   const [email, setEmail] = useState('');
@@ -13,7 +14,7 @@ function Footer() {
 
     setStatus('sending');
     try {
-      const res = await fetch('http://localhost:5000/api/newsletter', {
+      const res = await fetch(`${API_URL}/api/newsletter`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),

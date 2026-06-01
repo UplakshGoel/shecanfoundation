@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
+import { API_URL } from '../config/api';
 
 /* ---- Counter Hook ---- */
 function useCounter(end, duration = 2000, startCounting = false) {
@@ -87,7 +88,7 @@ function Home() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/stats');
+        const response = await fetch(`${API_URL}/api/stats`);
         if (response.ok) {
           const result = await response.json();
           if (result.success && result.data) {

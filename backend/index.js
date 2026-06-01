@@ -36,7 +36,11 @@ app.use((err, req, res, next) => {
 // ──────────────────────────────────────────────
 // Start Server
 // ──────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`✨  She Can Foundation API running on http://localhost:${PORT}`);
-  console.log(`   CORS origin: ${CLIENT_URL}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`✨  She Can Foundation API running on http://localhost:${PORT}`);
+    console.log(`   CORS origin: ${CLIENT_URL}`);
+  });
+}
+
+module.exports = app;
