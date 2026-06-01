@@ -8,44 +8,6 @@ This repository is split into:
 
 ---
 
-## Getting Started
-
-### Prerequisites
-- Node.js (v16.x or higher)
-- npm (v8.x or higher)
-
-### Setup & Installation
-
-1. Clone the repository (if not already done).
-2. Install dependencies for the backend:
-   ```bash
-   cd backend
-   npm install
-   ```
-3. Install dependencies for the frontend:
-   ```bash
-   cd frontend
-   npm install
-   ```
-
-### Running the Project
-
-#### 1. Start the Backend Server
-In the `backend` folder, run:
-```bash
-npm start
-```
-The backend server will run on `http://localhost:5000`.
-
-#### 2. Start the Frontend Dev Server
-In the `frontend` folder, run:
-```bash
-npm run dev
-```
-The frontend dev server will start, typically on `http://localhost:5173`. Open this URL in your web browser.
-
----
-
 ## Key Features
 
 - **Empowerment Portal**: Displays dynamic statistics fetched directly from the backend server.
